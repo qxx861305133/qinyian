@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex11 full-width over-hide">
+  <div class="flex flex11 full-width over-hide" v-loading="loading">
     <div class="slide flex-shrink0 full-height">
         <Menu class="full-height over-y-auto" active-name="1-2" :open-names="['1']" theme="dark">
         <Submenu name="1">
@@ -42,9 +42,33 @@
         </Menu>
     </div>
     <div class="over-y-auto flex11 full-height pad24">
-        <div style="height: 10000px;">我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+        <Button @click="load">加载</Button>
+        <div style="height: 1000px;">我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
     </div>
   </div>
 </template>
+<script>
+  export default {
+    name: '',
+    data() {
+      return {
+          loading: true
+      }
+    },
+    methods: {
+        load() {
+            setTimeout(() => {
+                this.loading = false
+            },1000)
+            this.loading = true
+        }
+    },
+    mounted() {
+        setTimeout(() => {
+            this.loading = false
+        },2000)
+    }
+  }
+</script>
 <style lang='stylus' scoped>
 </style>
