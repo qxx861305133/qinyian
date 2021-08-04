@@ -9,16 +9,16 @@ Vue.use(ViewUI)
 Vue.config.productionTip = false
 
 //全局loading指定
+const newEl = document.createElement('div')
+newEl.id = 'loading'
+newEl.innerHTML = `
+<div class="text-center">
+    <img id="loading-logo" src="${logo}" />
+    <p class="fz-14 block margin-t-8">吃饭中...</p>
+  </div>
+`
 Vue.directive('loading', {
   bind: function (el) {
-    const newEl = document.createElement('div')
-    newEl.id = 'loading'
-    newEl.innerHTML = `
-    <div class="text-center">
-        <img id="loading-logo" src="${logo}" />
-        <p class="fz-14 block margin-t-8">吃饭中...</p>
-      </div>
-   `
     el.appendChild(newEl)
   },
   update: (el, binding) => {
@@ -26,14 +26,6 @@ Vue.directive('loading', {
       const loading = document.getElementById('loading')
       loading.parentNode.removeChild(loading)
     } else {
-      const newEl = document.createElement('div')
-      newEl.id = 'loading'
-      newEl.innerHTML = `
-      <div class="text-center">
-          <img id="loading-logo" src="${logo}" />
-          <p class="fz-14 block margin-t-8">吃饭中...</p>
-        </div>
-    `
       el.appendChild(newEl)
     }
   }
