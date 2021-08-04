@@ -8,6 +8,7 @@ Vue.use(ViewUI)
 Vue.config.productionTip = false
 
 import '@/assets/css/reset.css'
+import '@/assets/css/common.css'
 
 new Vue({
   router,

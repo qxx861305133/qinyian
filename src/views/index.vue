@@ -1,6 +1,7 @@
 <template>
-  <div class="contain">
-       <Menu class="slide" active-name="1-2" :open-names="['1']" theme="dark">
+  <div class="flex flex11 full-width over-hide">
+    <div class="slide flex-shrink0 full-height">
+        <Menu class="full-height over-y-auto" active-name="1-2" :open-names="['1']" theme="dark">
         <Submenu name="1">
             <template slot="title">
                 <Icon type="ios-analytics" />
@@ -38,14 +39,12 @@
             <MenuItem name="4-3">Option 11</MenuItem>
             <MenuItem name="4-4">Option 12</MenuItem>
         </Submenu>
-    </Menu>
+        </Menu>
+    </div>
+    <div class="over-y-auto flex11 full-height pad24">
+        <div style="height: 10000px;">我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+    </div>
   </div>
 </template>
 <style lang='stylus' scoped>
-    .contain {
-        flex 1 1 auto
-        .slide {
-            height 100%
-        }
-    }
 </style>

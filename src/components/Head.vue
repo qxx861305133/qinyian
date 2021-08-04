@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <img class="logo" src="@/assets/image/logo.png" alt="">
-    <span class="title">头部</span>
+    <div dot-light="qinyian" class="title relative">qinyian</div>
     <span>登录</span>
   </div>
 </template>
@@ -44,4 +44,31 @@ export default {
       border-radius 4px
     }
   }
+  .title::after {
+        content: attr(dot-light);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: transparent;
+        clip-path: ellipse(24px 24px at 0% 50%);
+        animation: SpotLight 5s infinite;
+        background-image: linear-gradient($90d, $76b, $009a)
+        background-size: 150%;
+        background-position: center center;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+  @keyframes SpotLight {
+    0% {
+        clip-path: ellipse(24px 24px at 0% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(24px 24px at 100% 50%);
+    }
+
+    100% {
+        clip-path: ellipse(24px 24px at 0% 50%);
+    }
+ }
 </style>

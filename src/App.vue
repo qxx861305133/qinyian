@@ -2,7 +2,7 @@
   <div id="app">
     <v-head />
     <router-view></router-view>
-    <v-footer />
+    <v-footer v-if="false"/>
   </div>
 </template>
 
@@ -23,6 +23,6 @@ export default {
   #app {
     display: flex;
     flex-direction: column;
-    height: 100vh
+    height: 100vh;
   }
 </style>

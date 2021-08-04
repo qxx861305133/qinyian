@@ -1,0 +1,155 @@
+ .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+  .clear {
+    clear: both;
+  }
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .block {
+    display: block;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+ .flex {
+    display: flex;
+  }
+  .flex0 {
+    flex: 0;
+  }
+  .flex1 {
+    flex: 1;
+  }
+  .flex2 {
+    flex: 2;
+  }
+  .flex3 {
+    flex: 3;
+  }
+  .flex10 {
+    flex: 1 0 auto;
+  }
+  .flex11 {
+    flex: 1 1 auto;
+  }
+  .flex-shrink0 {
+    flex-shrink: 0 !important;
+  }
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .flex-column-center,
+  .flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-justify-center {
+    display: flex;
+    justify-content: center;
+  }
+  .flex-justify-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .flex-justify-between,
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .flex-align-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .full-height {
+    height: 100%;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .white-nowarp {
+    white-space: nowrap;
+  }
+  .ellipsis {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .ellipsis-inline {
+    max-width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .over-y-auto {
+    overflow-y: auto;
+    /* overflow-y: overlay; */
+    overflow-x: hidden;
+  }
+  .over-hide {
+    overflow: hidden !important;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .disabled {
+    cursor: not-allowed;
+  }
+  .pad24 {
+    padding: 24px;
+  }
