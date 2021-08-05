@@ -1,12 +1,19 @@
 import Vue from 'vue'
 import router from '@/router/index'
 import App from './App.vue'
+import axios from '@/axios/http'
+import api from '@/api/api'
 import ViewUI from 'view-design';
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 import '@/assets/css/change-iview.less';
 const logo = require('@/assets/image/logo.png')
 
 Vue.use(ViewUI)
+Vue.use(mavonEditor)
 Vue.config.productionTip = false
+Vue.prototype.$http = axios
+Vue.prototype.$api = api
 
 //全局loading指定
 const newEl = document.createElement('div')
@@ -24,6 +31,7 @@ Vue.directive('loading', {
   update: (el, binding) => {
     if (!binding.value) {
       const loading = document.getElementById('loading')
+      if (!loading || !loading.parentNode) return
       loading.parentNode.removeChild(loading)
     } else {
       el.appendChild(newEl)

@@ -5,10 +5,17 @@
   "scripts": {
     "dev": "vue-cli-service serve --mode development --open",
     "build": "vue-cli-service build",
+    "node": "node node-server",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mavon-editor": "^2.9.1",
+    "qs": "^6.10.1",
     "style-resources-loader": "^1.4.1",
     "view-design": "^4.6.1",
     "vue": "^2.6.11",

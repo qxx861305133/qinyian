@@ -7,10 +7,27 @@ const routes = [
         path: '/',
         name: 'index',
         meta: {
-            title: '按钮展示'
+            title: '首页'
         },
-        component: () => import('@/views/index')
-    }
+        component: () => import('@/views/index'),
+        children: [
+          {
+            path: '/automation',
+            name: 'automation',
+            meta: {
+                title: '自动化'
+            },
+            component: () => import('@/views/automation/index'),
+            children: [
+              {
+                path: '/automation/gulp',
+                name: 'gulp',
+                component: () => import('@/views/automation/Gulp/index')
+              }
+            ]
+          }
+        ]
+    },
 ]
 
 const router = new VueRouter({

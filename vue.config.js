@@ -15,8 +15,18 @@ module.exports = {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
   },
-  publicPath: './',
+  publicPath: process.env.VUE_APP_TYPE ? '/' : '/',
   outputDir: 'dist',
-  assetsDir: 'assets'
+  assetsDir: 'assets',
+  devServer: {
+    port: 8080,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+      }
+    }
+  }
 }
 
